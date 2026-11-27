@@ -1,0 +1,2 @@
+import { createClient } from "@supabase/supabase-js";
+export async function isAdmin(token:string){const url=process.env.NEXT_PUBLIC_SUPABASE_URL!;const anon=process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;const db=createClient(url,anon,{auth:{persistSession:false}});const {data:{user},error}=await db.auth.getUser(token);if(error||!user)return false;const {data}=await db.from("admins").select("user_id").eq("user_id",user.id).maybeSingle();return !!data;}
