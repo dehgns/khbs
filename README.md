@@ -1,24 +1,24 @@
-# 경기고등학교 방송부 신입부원 선발 결과 조회
+# 경기고등학교 방송부(KHBS) 신입부원 최종 합격자발표
 
-대학 입학처 합격자 발표 포털 스타일로 만든 **경기고등학교 방송부(KGBS) 신입부원 선발 결과 조회** 페이지입니다.
+대학 입학처 합격자 발표 화면 스타일로 만든 **경기고등학교 방송부 신입부원 최종 합격자발표** 페이지입니다.
 정적 HTML/CSS/JS로만 만들어져 GitHub Pages에서 바로 열립니다.
 
-- 배포 주소: <https://dehgns.github.io/kgbs-result/>
-- 저장소: <https://github.com/dehgns/kgbs-result>
+- 배포 주소: <https://dehgns.github.io/khbs/>
+- 저장소: <https://github.com/dehgns/khbs> (**`gh-pages` 브랜치**가 사이트, `main`은 기존 앱 코드)
 
 ## 파일 구성
 
 | 파일 | 설명 |
 | --- | --- |
-| `index.html` | 페이지 구조 (헤더·안내·조회 폼·결과 영역) |
-| `style.css` | 디자인 (네이비·골드 톤, 모바일/PC 반응형, 인쇄 스타일) |
+| `index.html` | 페이지 구조 (상단 배너·로고·조회 박스·결과 영역) |
+| `style.css` | 디자인 (흰 배경·네이비 배너, 모바일/PC 반응형, 인쇄 스타일) |
 | `data.js` | **명단·안내 문구 데이터 — 평소에 고칠 파일은 이것 하나입니다** |
 | `app.js` | 조회 동작 (학번 확인, 결과 화면 표시) |
 | `.nojekyll` | GitHub Pages에서 파일을 그대로 올리기 위한 빈 파일 |
 
 ## 명단 바꾸는 방법
 
-1. GitHub에서 `data.js` 파일을 열고 오른쪽 위 **연필(Edit)** 아이콘을 누릅니다.
+1. GitHub에서 `gh-pages` 브랜치의 `data.js` 파일을 열고 오른쪽 위 **연필(Edit)** 아이콘을 누릅니다.
 2. `applicants` 배열의 예시 데이터를 실제 명단으로 바꿉니다.
 
 ```js
@@ -40,17 +40,16 @@ applicants: [
 
 같은 `data.js` 안에서 다음 부분을 고치면 됩니다.
 
-- `notices` : 상단 **안내 사항** 목록 (굵게 표시하려면 `<strong>…</strong>` 사용)
-- `schedule` : 오른쪽 **선발 일정** (`current: true` 를 지금 단계에 붙이면 강조됩니다)
-- `contact` : **문의** 안내 문구
-- `messages.pass` : 합격 통지서의 인사말·본문·오리엔테이션(OT) 안내
+- `notices` : 조회 버튼 아래 **안내 박스** (굵게 표시하려면 `<strong>…</strong>`, 아래 작은 줄은 `sub`)
+- `messages.pass` : 합격 화면의 제목·인사말·오리엔테이션(OT) 안내
 - `messages.fail` : 불합격 안내 문구
 - `messages.notFound` : 등록되지 않은 학번 안내 문구
+- `meta` : 학년도·학교·동아리 이름 (상단 결과 화면 설명에 쓰입니다)
 
-### 테스트용 예시 학번 안내 끄기
+### "예시 학번" 안내 끄기
 
 실제 명단을 넣은 뒤에는 `data.js` 의 `showExamples: true` 를 `false` 로 바꾸면
-화면 맨 아래의 "테스트용 예시 학번" 안내가 사라집니다.
+조회 박스 우측 하단의 **예시 학번** 안내가 사라집니다.
 
 ## 확인용 예시 학번
 
@@ -61,8 +60,9 @@ applicants: [
 | `10102` | 불합격 |
 | 그 외 학번 | 조회 결과 없음 |
 
+조회 박스 우측 하단 **예시 학번** 버튼으로도 확인할 수 있습니다.
 주소 뒤에 `?id=10101` 을 붙이면 해당 학번으로 자동 조회됩니다.
-(예: <https://dehgns.github.io/kgbs-result/?id=10101>)
+(예: <https://dehgns.github.io/khbs/?id=10101>)
 
 ## 개인정보 주의
 
@@ -74,8 +74,8 @@ applicants: [
 ## 직접 수정해서 다시 올리기 (선택)
 
 ```bash
-git clone https://github.com/dehgns/kgbs-result.git
-cd kgbs-result
+git clone -b gh-pages https://github.com/dehgns/khbs.git
+cd khbs
 # data.js 수정 후
 git add data.js
 git commit -m "명단 업데이트"

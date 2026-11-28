@@ -3,160 +3,101 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>경기고등학교 방송부 신입부원 선발 결과 조회</title>
-  <meta name="description" content="경기고등학교 방송부(KGBS) 신입부원 선발 결과 조회 페이지입니다. 학번을 입력하여 합격 여부와 배정 파트를 확인하실 수 있습니다.">
-  <meta name="theme-color" content="#0b2545">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230b2545'/%3E%3Cpath d='M32 10l18 5v16c0 11-8 18-18 21-10-3-18-10-18-21V15z' fill='none' stroke='%23c8a951' stroke-width='2.4'/%3E%3Ccircle cx='32' cy='27' r='3.4' fill='%23c8a951'/%3E%3Cpath d='M25 22a10 10 0 0 1 14 0M21 40h22' fill='none' stroke='%23c8a951' stroke-width='2.2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <title>경기고등학교 방송부 신입부원 최종 합격자발표 (KHBS)</title>
+  <meta name="description" content="경기고등학교 방송부(KHBS) 신입부원 최종 합격자발표 페이지입니다. 학번을 입력하여 합격 여부와 배정 파트를 확인하실 수 있습니다.">
+  <meta name="theme-color" content="#1a3778">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23ffffff'/%3E%3Cg fill='%23111c86'%3E%3Crect x='14' y='9' width='21' height='25' rx='4'/%3E%3Crect x='41' y='24' width='10' height='12' rx='2.4'/%3E%3Crect x='25' y='40' width='11' height='14' rx='2.6'/%3E%3C/g%3E%3Cg fill='none' stroke='%23111c86' stroke-width='2'%3E%3Crect x='39.5' y='15' width='12' height='15' rx='3'/%3E%3Crect x='24.5' y='39' width='12' height='15' rx='3'/%3E%3C/g%3E%3C/svg%3E">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip-link" href="#main">본문 바로가기</a>
 
-  <div class="utility-bar">
-    <div class="wrap">
-      <span class="utility-school">경기고등학교 공식 안내</span>
-      <span class="utility-club">방송부 · KGBS</span>
+  <!-- ================= 상단 배너 ================= -->
+  <header class="banner">
+    <div class="banner-inner">
+      <h1 class="banner-line">
+        <span class="banner-school">경기고등학교 방송부</span>
+        <span class="banner-title">신입부원 최종 합격자발표</span>
+      </h1>
+      <p class="banner-en">ANNOUNCEMENT</p>
     </div>
-  </div>
 
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <div class="brand">
-        <svg class="emblem" viewBox="0 0 72 82" role="img" aria-label="경기고등학교 방송부 엠블럼">
-          <defs>
-            <linearGradient id="emblemGold" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stop-color="#f0dfa2"/>
-              <stop offset="45%" stop-color="#c8a951"/>
-              <stop offset="100%" stop-color="#9a7b2e"/>
-            </linearGradient>
-          </defs>
-          <path class="emblem-shield" d="M36 3 66 12v26c0 19-13 31-30 37C19 69 6 57 6 38V12z"
-                fill="rgba(255,255,255,.04)" stroke="url(#emblemGold)" stroke-width="2.4"/>
-          <path d="M36 8.5 60.5 16v22c0 16-11 27-24.5 32C22.5 65 11.5 54 11.5 38V16z"
-                fill="none" stroke="url(#emblemGold)" stroke-width=".9" opacity=".65"/>
-          <g fill="none" stroke="url(#emblemGold)" stroke-linecap="round">
-            <path d="M26 27.5a14 14 0 0 1 20 0" stroke-width="2"/>
-            <path d="M31 32.5a8 8 0 0 1 10 0" stroke-width="1.8"/>
-            <circle cx="36" cy="38.5" r="3" fill="url(#emblemGold)" stroke="none"/>
-            <path d="M27 47h18" stroke-width="1.6"/>
-            <path d="M30 52h12" stroke-width="1.6"/>
-          </g>
-          <text x="36" y="63" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif"
-                font-size="9.5" letter-spacing="1.6" fill="url(#emblemGold)">KGBS</text>
-        </svg>
-        <div class="brand-text">
-          <p class="brand-school">경기고등학교</p>
-          <h1 class="brand-title">방송부 <span class="brand-sub">신입부원 선발 결과 조회</span></h1>
-        </div>
-      </div>
-      <div class="header-side">
-        <p class="header-side-label">2026학년도 신입부원 모집</p>
-        <p class="header-side-value">선발 결과 발표</p>
-      </div>
+    <div class="badge" aria-hidden="true">
+      <svg class="badge-logo" viewBox="0 0 361 429"><use href="#khbs-logo"></use></svg>
     </div>
-    <div class="header-rule" aria-hidden="true"></div>
   </header>
 
-  <nav class="path-bar" aria-label="현재 위치">
-    <div class="wrap">
-      <ol>
-        <li>홈</li>
-        <li>동아리</li>
-        <li>방송부</li>
-        <li aria-current="page">선발 결과 조회</li>
-      </ol>
-    </div>
-  </nav>
+  <!-- KHBS 로고 (4개의 둥근 사각형) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="khbs-logo" viewBox="0 0 361 429">
+      <rect x="0" y="0" width="196" height="232" rx="31" fill="currentColor"/>
+      <rect x="237" y="84" width="123" height="144" rx="20" fill="none"
+            stroke="currentColor" stroke-width="4"/>
+      <rect x="66" y="278" width="127" height="150" rx="21" fill="none"
+            stroke="currentColor" stroke-width="4"/>
+      <rect x="235" y="275" width="93" height="107" rx="16" fill="currentColor"/>
+    </symbol>
+  </svg>
 
   <main id="main">
-    <!-- 조회 화면 -->
+    <!-- ================= 조회 화면 ================= -->
     <section id="view-form" class="view">
-      <div class="wrap layout">
-        <div class="main-col">
-          <div class="card notice-card">
-            <h2 class="card-title">
-              <span class="card-title-mark" aria-hidden="true"></span>
-              안내 사항
-            </h2>
-            <ul id="notice-list" class="notice-list">
-              <!-- data.js 의 notices 로 채워집니다 -->
-            </ul>
+      <div class="panel">
+        <h2 class="panel-title">신입부원 선발 결과 조회</h2>
+
+        <form id="lookup-form" novalidate>
+          <div class="field-row">
+            <label for="student-id">학번</label>
+            <input
+              id="student-id"
+              name="studentId"
+              type="text"
+              inputmode="numeric"
+              autocomplete="off"
+              spellcheck="false"
+              maxlength="5"
+              placeholder="학번을 입력하세요"
+              aria-describedby="form-error">
           </div>
 
-          <div class="card form-card">
-            <h2 class="form-title">선발 결과 조회</h2>
-            <p class="form-desc">
-              지원하신 <strong>학번</strong>을 입력하시면 합격 여부와 배정 파트를 확인하실 수 있습니다.<br>
-              조회는 별도의 회원가입 없이 이용하실 수 있습니다.
-            </p>
+          <p id="form-error" class="field-error" role="alert" hidden></p>
 
-            <form id="lookup-form" novalidate>
-              <div class="field">
-                <label class="field-label" for="student-id">학번</label>
-                <div class="field-row">
-                  <div class="input-shell">
-                    <input
-                      id="student-id"
-                      name="studentId"
-                      type="text"
-                      inputmode="numeric"
-                      autocomplete="off"
-                      spellcheck="false"
-                      maxlength="5"
-                      placeholder="학번 5자리를 입력하세요"
-                      aria-describedby="student-id-hint form-error">
-                  </div>
-                  <button class="btn btn-primary" type="submit">
-                    <span class="btn-label">조회하기</span>
-                  </button>
-                </div>
-                <p id="student-id-hint" class="field-hint">예) 10101 — 숫자 5자리</p>
-                <p id="form-error" class="field-error" role="alert" hidden></p>
-              </div>
-            </form>
-
-            <div class="form-foot">
-              <span class="lock-mark" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="14" height="14"><path d="M7 10V7a5 5 0 0 1 10 0v3m-11 0h12v10H6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
-              </span>
-              입력하신 학번은 조회 목적으로만 사용되며 저장되지 않습니다.
-            </div>
+          <div class="submit-row">
+            <button class="btn-search" type="submit">조회(Search)</button>
           </div>
+        </form>
+
+        <div class="info-box">
+          <ol id="notice-list"></ol>
         </div>
 
-        <aside class="side-col" aria-label="부가 안내">
-          <div class="side-card">
-            <h3 class="side-title">선발 일정</h3>
-            <ol id="schedule-list" class="schedule">
-              <!-- data.js 의 schedule 로 채워집니다 -->
-            </ol>
-          </div>
-          <div class="side-card side-card-contact">
-            <h3 class="side-title">문의</h3>
-            <p id="contact-text"></p>
-          </div>
-        </aside>
+        <div class="panel-notes">
+          <button type="button" class="mini-btn" data-toggle="help" aria-expanded="false" aria-controls="help-panel">도움말</button>
+          <span class="mini-sep" aria-hidden="true">|</span>
+          <button type="button" class="mini-btn" data-toggle="examples" aria-expanded="false" aria-controls="examples-panel">예시 학번</button>
+        </div>
+
+        <div id="help-panel" class="mini-panel" hidden>
+          <p>학번은 입학 시 부여된 5자리 숫자입니다. (예: 10101)</p>
+          <p>조회 결과는 서버에 저장되지 않으며, 화면을 닫으면 사라집니다.</p>
+          <p>결과에 대한 문의는 방송부 담당 선생님께 해 주시기 바랍니다.</p>
+        </div>
+
+        <div id="examples-panel" class="mini-panel" hidden>
+          <p class="mini-panel-label">화면 확인용 예시 학번입니다.</p>
+          <ul class="example-list" id="example-list"></ul>
+        </div>
       </div>
     </section>
 
-    <!-- 결과 화면 -->
+    <!-- ================= 결과 화면 ================= -->
     <section id="view-result" class="view" hidden aria-live="polite"></section>
   </main>
 
   <footer class="site-footer">
-    <div class="wrap">
-      <div class="footer-top">
-        <p class="footer-org">경기고등학교 방송부 <span>Kyunggi High School Broadcasting System</span></p>
-        <p class="footer-note">본 사이트는 경기고등학교 방송부 신입부원 선발 결과 조회를 위한 페이지입니다.</p>
-      </div>
-      <div class="footer-test" id="test-guide">
-        <!-- data.js 의 examples 로 채워집니다 -->
-      </div>
-      <p class="footer-copy">© 2026 KGBS. All rights reserved.</p>
-    </div>
+    <p class="footer-org">경기고등학교 방송부 <span>KYUNGGI HIGH SCHOOL BROADCASTING SYSTEM</span></p>
+    <p class="footer-copy">© 2026 KHBS. All rights reserved.</p>
   </footer>
-
-  <div id="confetti-layer" class="confetti-layer" aria-hidden="true"></div>
 
   <script src="data.js"></script>
   <script src="app.js"></script>
