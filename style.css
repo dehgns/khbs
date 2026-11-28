@@ -516,7 +516,7 @@ main {
   .result-head h2 { font-size: 20px; }
   .result-table th { width: 88px; padding: 11px 10px; font-size: 13px; }
   .result-table td { padding: 11px 10px; font-size: 13.5px; }
-  .result-actions { flex-direction: column-reverse; }
+  .result-actions { flex-direction: column; }
   .btn { width: 100%; }
 }
 
