@@ -175,14 +175,15 @@
               "<p>" + nl2br(m.ot || "") + "</p>" +
             "</div>" +
 
-            '<div class="cert-stamp" aria-label="직인">' +
-              "합격<span>KGBS</span>" +
+            '<div class="cert-footer">' +
+              '<p class="cert-sign">' +
+                '<span class="cert-sign-authority">' + esc(meta.school || "") + " " + esc(meta.club || "") + "장</span>" +
+                "<small>KYUNGGI HIGH SCHOOL BROADCASTING SYSTEM</small>" +
+              "</p>" +
+              '<div class="cert-stamp" aria-label="직인">' +
+                "합격<span>KGBS</span>" +
+              "</div>" +
             "</div>" +
-
-            '<p class="cert-sign">' +
-              '<span class="cert-sign-authority">' + esc(meta.school || "") + " " + esc(meta.club || "") + "장</span>" +
-              "<small>KYUNGGI HIGH SCHOOL BROADCASTING SYSTEM</small>" +
-            "</p>" +
           "</div>" +
         "</article>" +
 
@@ -202,7 +203,7 @@
     var html =
       '<div class="wrap">' +
         '<div class="result-head">' +
-          '<span class="result-eyebrow">선발 결과 안내</span>' +
+          '<span class="result-eyebrow">조회 결과</span>' +
           "<h2>선발 결과가 확인되었습니다</h2>" +
           "<p>학번 " + esc(a.studentId) + "</p>" +
         "</div>" +

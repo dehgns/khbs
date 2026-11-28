@@ -34,6 +34,8 @@
 
 * { box-sizing: border-box; }
 
+[hidden] { display: none !important; }
+
 html { -webkit-text-size-adjust: 100%; }
 
 body {
@@ -44,6 +46,8 @@ body {
   font-size: 16px;
   line-height: 1.65;
   letter-spacing: -0.01em;
+  word-break: keep-all;
+  overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -675,11 +679,17 @@ main { padding: 34px 0 60px; }
 }
 .cert-ot p { font-size: 13px; color: var(--ink-soft); line-height: 1.75; white-space: pre-line; }
 
+.cert-footer {
+  position: relative;
+  margin-top: 32px;
+  padding-right: 92px;
+}
+
 .cert-stamp {
   position: absolute;
-  right: 40px;
-  bottom: 46px;
-  width: 92px;
+  right: 0;
+  bottom: -6px;
+  width: 88px;
   height: 92px;
   border: 2.5px solid rgba(178, 58, 58, .72);
   border-radius: 50%;
@@ -698,13 +708,14 @@ main { padding: 34px 0 60px; }
   box-shadow: inset 0 0 0 4px rgba(178, 58, 58, .1);
 }
 .cert-stamp span { display: block; font-size: 9px; letter-spacing: .1em; opacity: .8; margin-top: 2px; }
+.cert-stamp { height: 88px; }
 @keyframes stampIn {
   0% { opacity: 0; transform: rotate(-12deg) scale(1.6); }
   70% { opacity: 1; transform: rotate(-12deg) scale(.96); }
   100% { opacity: 1; transform: rotate(-12deg) scale(1); }
 }
 .cert-sign {
-  margin-top: 30px;
+  margin-top: 0;
   text-align: center;
   font-family: var(--font-serif);
   font-size: 15px;
@@ -860,22 +871,18 @@ main { padding: 34px 0 60px; }
   .cert-table th { width: 86px; font-size: 12.5px; padding-left: 12px; }
   .cert-table td { font-size: 14px; padding-left: 14px; }
   .cert-ot { padding: 14px 15px; }
+  .certificate { padding-bottom: 30px; }
+  .cert-footer { margin-top: 26px; padding-right: 0; }
   .cert-stamp {
+    position: relative;
     right: auto;
-    left: 50%;
-    bottom: 26px;
-    transform: translateX(-50%) rotate(-8deg) scale(.86);
-    animation-name: stampInMobile;
-    width: 84px;
-    height: 84px;
-    font-size: 14px;
+    bottom: auto;
+    margin: 22px auto 0;
+    width: 78px;
+    height: 78px;
+    font-size: 13px;
   }
-  @keyframes stampInMobile {
-    0% { opacity: 0; transform: translateX(-50%) rotate(-8deg) scale(1.4); }
-    70% { opacity: 1; transform: translateX(-50%) rotate(-8deg) scale(.82); }
-    100% { opacity: 1; transform: translateX(-50%) rotate(-8deg) scale(.86); }
-  }
-  .cert-sign { margin-top: 24px; font-size: 14px; }
+  .cert-sign { font-size: 14px; }
   .plain-card { padding: 32px 20px 28px; }
   .result-actions { flex-direction: column-reverse; }
   .result-actions .btn { width: 100%; }
