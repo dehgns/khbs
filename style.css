@@ -108,11 +108,10 @@ ul, ol { padding: 0; list-style: none; }
 /* 흰색 원형 배지 + KHBS 로고 */
 .badge {
   position: absolute;
-  top: 50%;
+  top: 18px;
   right: max(28px, calc((100% - 1120px) / 2 + 8px));
-  transform: translateY(-50%);
-  width: 160px;
-  height: 160px;
+  width: 152px;
+  height: 152px;
   border-radius: 50%;
   background: #fff;
   display: grid;
@@ -120,7 +119,7 @@ ul, ol { padding: 0; list-style: none; }
   box-shadow: 0 4px 16px rgba(8, 18, 60, 0.22);
 }
 .badge-logo {
-  width: 74px;
+  width: 86px;
   height: auto;
   color: var(--logo-navy);
   display: block;
@@ -473,8 +472,8 @@ main {
    ============================================================ */
 @media (max-width: 900px) {
   .banner-inner { padding-right: 150px; }
-  .badge { width: 128px; height: 128px; right: 20px; }
-  .badge-logo { width: 60px; }
+  .badge { width: 132px; height: 132px; right: 20px; top: 14px; }
+  .badge-logo { width: 74px; }
 }
 
 @media (max-width: 640px) {
@@ -488,8 +487,8 @@ main {
   .banner-title { font-size: 17.5px; margin-top: 2px; }
   .banner-en { font-size: 10.5px; letter-spacing: 0.18em; margin-top: 6px; }
 
-  .badge { width: 74px; height: 74px; right: 12px; }
-  .badge-logo { width: 36px; }
+  .badge { width: 80px; height: 80px; right: 12px; top: 12px; }
+  .badge-logo { width: 44px; }
 
   main { padding: 24px 14px 44px; }
 

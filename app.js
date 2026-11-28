@@ -248,8 +248,6 @@
     if (directId.length === 5) {
       input.value = directId;
       lookup(directId);
-    } else {
-      input.focus({ preventScroll: true });
     }
   } catch (err) {
     /* URLSearchParams 미지원 시 무시 */
